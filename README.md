@@ -38,4 +38,18 @@
 ```
 
 
+ #### Building the Layout ####
  
+ First, we will split the page into **five sections:** **Welcome, Services, Gallery, About, and Contact Us, along with a footer placeholder**. We will use the grid system to create distinct sections on the page. We will add content to these sections using the Bootstrap components jumbotron, tabs, carousel, and cards.
+ 
+
+- Exanple of an area
+
+```markdown
+<div class="container-fluid bg-primary">
+    <div class="row">
+        <h3>Welcome</h3>
+    </div>
+</div>
+
+```
