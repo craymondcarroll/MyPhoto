@@ -10,11 +10,15 @@
     <title>MyPhoto</title>
     <link rel="stylesheet"href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet"href="styles/myphoto.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato& subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
 
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-myphoto fixed-top">
+
     <a class="navbar-brand" href="#">MyPhoto</a>
 
     <button
@@ -24,7 +28,7 @@
             data-target="#navigation"
             aria-expanded="false"
             aria-controls="navigation" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+             <span class="navbar-toggler-icon"></span>
 
     </button>
 
@@ -38,8 +42,114 @@
             <li class="nav-item"><a class="nav-link" href="#about"> About</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact"> Contact Us</a></li>
         </ul>
+
+        <ul class="navbar-nav pull-right">
+            <li class="nav-item dropdown">
+                    <a href="#"
+                       class="nav-link dropdown-toggle"
+                       data-toggle="dropdown"
+                       role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        Profile
+                        <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a
+                                class="dropdown-item"
+                                data-toggle="modal"
+                                data-target="#profile-modal"
+                                href="#">
+                            Profile
+                        </a>
+
+                        <a class="dropdown-item"
+                           data-toggle="modal"
+                           data-target="#profile-modal"
+                           href="#">
+                            Settings
+
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+
+        </ul>
+
     </div>
+
+
 </nav>
+
+<div class="modal" id="profile-modal" role="dialog">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="profile-modal-label">Profile</h4>
+
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+
+
+            </div>
+
+            <div class="modal-body">
+                Profile Modal body
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="settings-modal" role="dialog">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="settings-modal-label">Settings</h4>
+
+
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+
+
+            </div>
+
+            <div class="modal-body">
+                Settings Modal Body
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 
